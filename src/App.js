@@ -1,6 +1,8 @@
 // eslint-disable-next-line
 /* eslint-disable */
+
 import React,{ useState, useEffect} from 'react';
+import Main from './components/main/Main'
 import Movies from "./components/Movies";
 import Hero from "./components/Hero";
 import Header from "./components/Header";
@@ -28,7 +30,6 @@ function App() {
   const [upcoming, setupcoming] = useState([]);
 
   useEffect(()=>{
-    
     async function movieListItems(){
       await axios.get(`${URL}${endpoints.originals}`,{
         params: {
@@ -66,12 +67,13 @@ function App() {
   
   return (
     <>
-    <Header></Header>
-    <Hero movie={originals[Math.floor(Math.random() * originals.length)]} />
-      <Movies title="Netflix originals" movies={originals}/>
-      <Movies title=" trending" movies={trending}/>
-      <Movies title=" popular" movies={popular}/>
-      <Movies title=" upcoming" movies={upcoming}/>
+    <Main></Main>
+    {/* <Header></Header> */}
+    {/* <Hero movie={originals[Math.floor(Math.random() * originals.length)]} /> */}
+      {/* <Movies title="Netflix originals" movies={originals}/> */}
+      {/* <Movies title=" trending" movies={trending}/> */}
+      {/* <Movies title=" popular" movies={popular}/> */}
+      {/* <Movies title=" upcoming" movies={upcoming}/> */}
     </>
   )
 }
