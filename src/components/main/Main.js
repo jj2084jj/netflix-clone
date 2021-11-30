@@ -1,6 +1,10 @@
-import React from "react";
+import React, { Component } from "react";
+import Question from "./Question";
 import Contents from "./Contents";
+import Footer from "./Footer";
 import "./main.scss";
+
+
 
 function Header() {
   return (
@@ -11,9 +15,10 @@ function Header() {
       />
       <div>
         <div>
-          <select name="언어">
-            <option value="">한국어</option>
-            <option value="">english</option>
+        
+          <select name="korea">
+            <option value="korea">🌐 한국어</option>
+            <option value="english">🌐 english</option>
           </select>
         </div>
         <div className="loginBtn">로그인</div>
@@ -21,6 +26,21 @@ function Header() {
     </header>
   );
 }
+export const Btn = function Btn () {
+  return (
+    <>
+    <div className="emailBox">
+          <p>
+            시청할 준비가 되셨나요? 멤버십을 등록하거나 재시작하려면 이메일
+            주소를 입력하세요.
+          </p>
+          <input type="text" placeholder="이메일을 입력해주세요" />
+          <button>시작하기</button>
+        </div>
+    </>
+  )
+}
+
 function Intro() {
   return (
     <div className="intro">
@@ -31,14 +51,7 @@ function Intro() {
         <div className="subText">
           다양한 디바이스에서 시청하세요. 언제든 해지하실 수 있습니다.
         </div>
-        <div className="emailBox">
-          <p>
-            시청할 준비가 되셨나요? 멤버십을 등록하거나 재시작하려면 이메일
-            주소를 입력하세요.
-          </p>
-          <input type="text" placeholder="이메일을 입력해주세요" />
-          <button>시작하기</button>
-        </div>
+        <Btn />
       </div>
       <div className="mainImg">
         <div className="bg"></div>
@@ -82,6 +95,8 @@ function Main() {
         position="rigth"
         imgUrl="https://occ-0-2219-988.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABTyynLTvOBU46RmBnCIPyjAryrXCZKImpoXdp7Mz54jVGKnBQ1X84bzR-3vtD-RA4uu2b1FjrDgfxE6KElG14WAXW19X.png?r=acf"
       ></Contents>
+      <Question></Question>
+      <Footer />
     </>
   );
 }
