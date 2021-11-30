@@ -51,20 +51,20 @@ a{
 .emailBox {
   margin-top: 30px;
   font-size: 1.8rem;
-  position: relative;
 }
 .emailBox input {
   width: 500px;
   height: 60px;
   border: none;
   padding: 10px 0 0 15px;
+  position: relative;
 
 }
 input:focus ~ .floating-label,
 input:not(:focus):valid ~ .floating-label{
-  top: 50px;
+  top: 10px;
   bottom: 10px;
-  left: 275px;
+  left: 15px;
   font-size: 11px;
   opacity: 1;
 }
@@ -78,8 +78,8 @@ input:not(:focus):valid ~ .floating-label{
 .floating-label {
   position: absolute;
   pointer-events: none;
-  left: 280px;
-  top: 62px;
+  left: 20px;
+  top: 25px;
   color: gray;
   transition: 0.2s ease all;
 }

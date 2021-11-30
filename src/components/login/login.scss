@@ -1,0 +1,92 @@
+.login{
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("https://assets.nflxext.com/ffe/siteui/vlv3/03fdc4bf-72f6-4926-83a7-a76e6a1a5591/780e6f4e-6f56-4926-82f5-ee222fb056c0/KR-ko-20211115-popsignuptwoweeks-perspective_alpha_website_small.jpg");
+  background-position: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  img{
+    width: 166px;
+    padding: 20px 60px;
+  }
+}
+.loginBox{
+  background-color:rgba(0,0,0,0.8);
+  width: 450px;
+  height: 660px;
+  margin: 0 auto;
+  border-radius: 10px;
+  margin-bottom: 300px;
+  padding: 60px 68px;
+  box-sizing: border-box;
+  div{
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 20px;
+    
+  }
+  h3{
+    font-size: 3rem;
+    margin-top: 0;
+  }
+  .infoBox{
+   
+    >div{
+      position: relative;
+    }
+    input{
+      display: block;
+      background-color: #333;
+      border:none;
+      width: 314px;
+      height: 50px;
+      margin-bottom: 16px;
+      border-radius: 3px;
+      padding: 10px;
+      box-sizing: border-box;
+      color: white;
+      
+      &:focus ~ .password,&:focus ~ .email {
+        top: 2px;
+      bottom: 10px;
+      left: 10px;
+      font-size: 1.1rem;
+      opacity: 1;
+      }
+    }
+    .email,.password{
+      position: absolute;
+      pointer-events: none;
+      z-index: 2;
+      top: 15px;
+      left: 20px;
+      font-size: 1.4rem;
+      transition: 0.2s ease all;
+    }
+    
+  }
+  
+  button{
+    background-color: #e50914;
+    width: 100%;
+    height: 50px;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+    border:none;
+    margin-top: 40px;
+    border-radius: 3px;
+  }
+  .checkBoxInput{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    div,a{
+      font-size: 1.2rem;
+      color: white;
+    }
+  }
+}
+.footerBg{
+  background-color: rgba(0,0,0,0.8);
+}

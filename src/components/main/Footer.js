@@ -1,6 +1,4 @@
 import React from "react";
-import { IoMdClose } from "react-icons/io";
-import { Btn } from "./Main";
 import "./main.scss";
 
 function Footer() {

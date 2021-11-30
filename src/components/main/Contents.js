@@ -2,21 +2,20 @@ import React from "react";
 import "./main.scss";
 
 function Contents({ title, subText, position, imgUrl, videoUrl, index }) {
-  console.log(index);
   const pointImg = () => {
     if (index === "2") {
       return (
         <>
           <div>
             <div>
-              <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/boxshot.png"></img>
+              <img alt="" src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/boxshot.png"></img>
             </div>
             <div>
               <h4>기묘한 이야기</h4>
               <p>저장 중...</p>
             </div>
             <div>
-              <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/download-icon.gif"></img>
+              <img alt=""  src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/download-icon.gif"></img>
             </div>
           </div>
         </>
@@ -37,7 +36,7 @@ function Contents({ title, subText, position, imgUrl, videoUrl, index }) {
           </div>
           <div className="imgBox" style={{ marginLeft: "40px" }}>
             <div style={{ backgroundImage: `url(${imgUrl})` }}></div>
-            <video className={videoStyle} autoplay="autoplay" loop muted>
+            <video className={videoStyle} autoPlay loop muted>
               <source src={videoUrl}></source>
             </video>
           </div>
