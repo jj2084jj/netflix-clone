@@ -34,7 +34,8 @@ export const Btn = function Btn () {
             시청할 준비가 되셨나요? 멤버십을 등록하거나 재시작하려면 이메일
             주소를 입력하세요.
           </p>
-          <input type="text" placeholder="이메일을 입력해주세요" />
+          <input type="text" required className="inputText"/>
+          <span class="floating-label">이메일을 입력해주세요</span>
           <button>시작하기</button>
         </div>
     </>

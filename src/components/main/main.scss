@@ -51,23 +51,49 @@ a{
 .emailBox {
   margin-top: 30px;
   font-size: 1.8rem;
+  position: relative;
 }
 .emailBox input {
   width: 500px;
   height: 60px;
   border: none;
-  padding: 10px;
-  box-sizing: border-box;
+  padding: 10px 0 0 15px;
+
 }
+input:focus ~ .floating-label,
+input:not(:focus):valid ~ .floating-label{
+  top: 50px;
+  bottom: 10px;
+  left: 275px;
+  font-size: 11px;
+  opacity: 1;
+}
+
+.inputText {
+  font-size: 14px;
+  width: 200px;
+  height: 35px;
+}
+
+.floating-label {
+  position: absolute;
+  pointer-events: none;
+  left: 280px;
+  top: 62px;
+  color: gray;
+  transition: 0.2s ease all;
+}
+
 .emailBox button {
   background-color: red;
   color: white;
   width: 160px;
-  height: 60px;
+  height: 70px;
   box-sizing: border-box;
   font-size: 2.5rem;
   border: none;
   cursor: pointer;
+  padding-top: 6px;
 }
 .mainImg {
   width: 100vw;
@@ -135,6 +161,7 @@ header {
       border-radius: 5px;
       padding-top: 9px;
       font-weight: bold;
+      cursor: pointer;
     }
   }
 }
@@ -242,6 +269,10 @@ header {
     margin:  0 auto;
     box-sizing: border-box;
     border-bottom: solid 3px black;
+    svg{
+      transform: rotate(45deg);
+      transition: all .3;
+    }
   }
   .questionItemText{
     padding: 40px;
