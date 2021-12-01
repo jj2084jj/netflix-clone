@@ -1,11 +1,11 @@
 {
   "posts": [
     {
-      "id": "test",
+      "email": "test",
       "password": "123"
     },
     {
-      "id": "joeun",
+      "email": "joeun",
       "password": "123"
     }
   ]
