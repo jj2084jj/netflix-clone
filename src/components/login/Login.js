@@ -35,7 +35,7 @@ function LoginCon() {
      })
       const user = await fetchLogin(userInfo);
       setUser(user);
-      navigate('/');
+      navigate('/media/home');
     } catch (error) {
       window.alert(error);
     }

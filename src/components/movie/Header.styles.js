@@ -5,7 +5,7 @@ export const HeaderContainer = styled.div`
   ${tw`
     flex
     justify-between
-    p-4
+    p-10
     fixed
     top-0
     w-full
@@ -19,5 +19,10 @@ export const HeaderContainer = styled.div`
     ${tw`
       h-8
     `}
+    width:140px;
+    height:40px;
+    &:last-child(1){
+      width:
+    }
   }
 `;

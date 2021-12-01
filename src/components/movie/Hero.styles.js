@@ -13,7 +13,7 @@ export const HeroContainer = styled.div`
 
 export const HeroTitle = styled.h1`
   ${tw`
-    text-5xl
+    text-8xl
     font-bold
     mb-4
   `}
@@ -24,12 +24,12 @@ export const HeroTitle = styled.h1`
 export const HeroDescription = styled.p`
   ${tw`
     font-medium
-    text-lg
+    text-2xl
     mb-4
   `}
   width: 45rem;
   max-width: 80vw;
-  line-height: 1.3;
+  line-height: 1.7;
 `;
 
 export const HeroButton = styled.button`
@@ -38,10 +38,16 @@ export const HeroButton = styled.button`
     font-bold
     px-8
     py-2
-    mr-2
+    mr-4
+    text-2xl
   `}
-    color:white;
+  
+  width:200px;
+  height:40px;
+  border:solid 1px #444;
+  color:gray;
   background-color: #111;
+  
 
   &:hover {
     background-color: #e6e6e6;
