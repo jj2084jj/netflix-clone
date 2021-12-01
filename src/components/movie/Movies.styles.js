@@ -8,7 +8,7 @@ export const MoviesContainer = styled.div`
 
 export const MoviesTitle = styled.h2`
   ${tw`
-      text-2xl
+      text-6xl
       font-bold
       uppercase
       mx-8
@@ -30,8 +30,9 @@ export const MoviesRow = styled.div`
 
 export const MoviesPoster = styled.img`
   ${tw`
-    m-2
-    w-40
+    m-4
+    mt-1
+    w-80
     cursor-pointer
   `}
   transition: all 0.2s;

@@ -1,27 +1,74 @@
-import React from "react";
+import React , { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Footer from "../main/Footer";
 import "./login.scss";
 
+export const fetchLogin = async({ email, pw}) => {
+  const response = await fetch("http://localhost:4000/posts");
+  if(response.ok){
+    const users = await response.json();
+    const user = users.find((user)=>user.email === email);
+    
+    if(!user || user.password !== pw){
+      throw new Error("계정을 다시 확인해주세요");
+    }
+
+    return user;
+  }
+  throw new Error("서버 통신이 원할하지 않습니다.");
+}
+
 function LoginCon() {
+  const [email,setEmail] = useState('')
+  const [pw,setPw] = useState('')
+  const [userInfo,setUser] = useState({
+    email:"",
+    pw:"",
+  })
+  const navigate = useNavigate();
+  
+  const onSubmitAccount = async () => {
+    try {
+     await setUser({
+       email:email,
+       pw : pw
+     })
+      const user = await fetchLogin(userInfo);
+      setUser(user);
+      navigate('/media/home');
+    } catch (error) {
+      window.alert(error);
+    }
+  };
+
+  
+
+  const inputEmail= (e) =>{
+    setEmail(e.target.value)
+    setUser({email:e.target.value,pw:pw})
+  }
+  const inputPass= (e) =>{
+    setPw(e.target.value)
+    setUser({email:email,pw:e.target.value})
+  }
+
   return (
     <>
       <div className="loginBox">
         <h3>로그인</h3>
         <div className="infoBox">
           <div>
-            <input type="text" />
+            <input type="text" value={email} onChange={inputEmail}/>
             <span className="email">이메일 주소 또는 전화번호</span>
           </div>
           <div>
-            <input type="text" />
+            <input type="text"  value={pw} onChange={inputPass}/>
             <span className="password">비밀번호</span>
           </div>
         </div>
-        <button>
-          <a href="/" style={{ color: "white" }}>
+          <button onClick={onSubmitAccount} style={{ color: "white" }}>
             로그인
-          </a>
-        </button>
+          </button>
         <div className="checkBoxInput">
           <div>
             <input type="checkbox" /> 로그인 정보 저장
