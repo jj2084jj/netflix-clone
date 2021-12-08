@@ -1,0 +1,33 @@
+.userInfo{
+  cursor: pointer;
+  img{
+    display: block;
+    width: 35px !important;
+    height: 35px !important;
+    padding-right: 0px !important;
+    border-radius: 5px;
+    
+  }
+  &:hover .arrowDown{
+    transform: rotate(180deg);
+    transition: all .5s;
+    
+  }
+  &:hover ~.userModalBg{
+    display: block !important;
+  }
+
+}
+.arrowDown{
+  margin-left: 10px;
+  width: 15px;
+  height: 15px;
+  
+}
+
+.userModalBg{
+  display: none !important;
+  background-color: black;
+  height: 400px;
+  width: 200px;
+}

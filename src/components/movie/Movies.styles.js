@@ -4,6 +4,7 @@ export const MoviesContainer = styled.div`
   ${tw`
     my-8
   `}
+  width:90%;
 `;
 
 export const MoviesTitle = styled.h2`

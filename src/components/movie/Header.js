@@ -1,4 +1,8 @@
 import React from "react";
+import UserInfo from "../modal/userInfo";
+import { Link } from "react-router-dom";
+import { FiSearch } from "react-icons/fi";
+import { BsBell } from "react-icons/bs";
 import { useEffect, useState } from "react/cjs/react.development";
 import { HeaderContainer } from "./Header.styles";
 
@@ -18,7 +22,7 @@ function Header() {
   return (
     <HeaderContainer
       dark={isDark}
-      style={{height:"60px"}}
+      style={{height:"68px"}}
     >
       <div className="center">
       <div>
@@ -46,11 +50,13 @@ function Header() {
           </ul>
         </div>
       </div>
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
-        alt=""
-        style={{ marginRight: "30px", cursor: "pointer" }}
-      />
+      <div>
+        <FiSearch style={{width:"20px",height:"20px",marginRight:"20px"}}></FiSearch>
+        
+        <Link to="/login" style={{width:"30px",fontSize:"15px",marginRight:"20px",color:"white",fontWeight:"bold"}}>키즈</Link> 
+        <BsBell style={{width:"20px",height:"20px",marginRight:"20px"}}></BsBell>
+      <UserInfo></UserInfo>
+      </div>
       </div>
     </HeaderContainer>
   );

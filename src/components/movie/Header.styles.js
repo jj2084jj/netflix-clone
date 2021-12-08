@@ -5,27 +5,20 @@ export const HeaderContainer = styled.div`
   ${tw`
     flex
     justify-between
-    p-5
     fixed
     top-0
     w-full
     transition-all
     z-10
   `}
+  padding: 0 60px;
   box-sizing:border-box;
    background: linear-gradient(to top, transparent, black);
 .center{
   max-width:2400px;
   width:100%;
   justify-content : space-between;
-  position:fixed;
-  left:50%;
-  transform:translateX(-50%);
   transition: all .3;
-  img{
-
-  margin-left:50px
-  }
 }
   ${(props) => (props.dark ? tw`bg-black` : tw`bg-transparent`)}
 div{
